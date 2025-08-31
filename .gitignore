@@ -1,0 +1,21 @@
+# Node modules
+/inCloudFrontend/node_modules
+/inCloudBackend/node_modules
+
+# Build outputs
+/inCloudFrontend/dist
+/inCloudBackend/dist
+
+# Environment files
+/inCloudFrontend/.env
+/inCloudBackend/.env
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# System files
+.DS_Store
