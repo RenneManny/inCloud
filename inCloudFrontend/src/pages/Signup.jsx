@@ -5,8 +5,6 @@ import { toast, Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import { Toaster } from "react-hot-toast";
-
 function Signup() {
   const formik = useFormik({
     initialValues: {
@@ -21,12 +19,9 @@ function Signup() {
           email: values.email,
           password: values.password,
         });
-
         console.log("Signup Success ✅", response.data);
         toast.success("User created successfully !");
-
         resetForm();
-
         alert("Account created successfully!");
       } catch (error) {
         toast.error(
@@ -45,11 +40,9 @@ function Signup() {
           </a>
         </div>
 
-        {/* Form Start */}
         <Toaster position="top-center" />
         <form onSubmit={formik.handleSubmit}>
           <div className="space-y-6">
-            {/* Email */}
             <div>
               <label className="text-slate-900 text-sm font-medium mb-2 block">
                 Email Id
@@ -68,7 +61,6 @@ function Signup() {
               </p>
             </div>
 
-            {/* Password */}
             <div>
               <label className="text-slate-900 text-sm font-medium mb-2 block">
                 Password
@@ -88,7 +80,6 @@ function Signup() {
               </p>
             </div>
 
-            {/* Confirm Password */}
             <div>
               <label className="text-slate-900 text-sm font-medium mb-2 block">
                 Confirm Password
@@ -109,7 +100,6 @@ function Signup() {
             </div>
           </div>
 
-          {/* Submit Button */}
           <div className="mt-12">
             <button
               type="submit"
@@ -119,7 +109,6 @@ function Signup() {
             </button>
           </div>
 
-          {/* Login Redirect */}
           <p className="text-slate-600 text-sm mt-6 text-center">
             Already have an account?{" "}
             <a

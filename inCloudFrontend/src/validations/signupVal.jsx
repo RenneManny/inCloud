@@ -4,8 +4,7 @@ const signupValidationSchema = yup.object().shape({
     .string()
     .min(10, "invalid email")
     .max(50, "invalid email")
-    .required("invalid email")
-  ,
+    .required("invalid email"),
   password: yup
     .string()
     .min(8, "Password must be at least 8 characters")
@@ -20,8 +19,7 @@ const signupValidationSchema = yup.object().shape({
     ),
   cpassword: yup
     .string()
-   .oneOf([yup.ref("password"), null], "password not matched")
-   .required("please confirm your password"),
-
+    .oneOf([yup.ref("password"), null], "password not matched")
+    .required("please confirm your password"),
 });
-export default signupValidationSchema
+export default signupValidationSchema;
